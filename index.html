@@ -14,11 +14,10 @@ html { scroll-behavior:smooth; }
 /* HEADER */
 header {
     background:white;
-    padding:10px 20px;
+    padding:15px 20px;
     display:flex;
-    justify-content:space-between;
+    flex-direction:column;
     align-items:center;
-    flex-wrap:wrap;
     border-bottom:1px solid #eee;
     position:sticky;
     top:0;
@@ -29,71 +28,57 @@ header {
 .logo-container {
     display:flex;
     align-items:center;
+    margin-bottom:10px;
 }
 
 .logo-container img {
-    height:50px;
+    height:70px; /* increased */
 }
 
 .company-name {
-    font-size:18px;
+    font-size:22px; /* increased */
     font-weight:bold;
     color:#0b3d5c;
-    margin-left:10px;
+    margin-left:12px;
+}
+
+/* NAV BELOW */
+nav {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
 nav a {
-    margin:10px;
+    margin:8px 15px;
     text-decoration:none;
     color:#0b3d5c;
     font-weight:bold;
 }
 
-/* HERO */
+/* HERO CLEAN */
 .hero {
     background:url('banner.jpg') center/cover no-repeat;
     aspect-ratio:16/6;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
     position:relative;
 }
 
-.hero::after {
-    content:'';
-    position:absolute;
-    top:0; left:0; right:0; bottom:0;
-    background:rgba(0,0,0,0.5);
-}
-
-.hero-content {
-    position:relative;
-    z-index:2;
-}
-
-.hero h1 {
-    font-size:40px;
-}
-
-/* HERO CTA (NEW) */
+/* CTA BUTTON */
 .hero-cta {
     position:absolute;
     bottom:25px;
     left:50%;
     transform:translateX(-50%);
-    z-index:3;
 }
 
 .hero-cta button {
-    padding:12px 25px;
+    padding:12px 28px;
     background:#2ecc71;
     border:none;
     color:white;
     font-size:16px;
-    border-radius:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    border-radius:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.25);
 }
 
 /* SECTION */
@@ -158,19 +143,19 @@ form input, form textarea {
 
 .hero { aspect-ratio:16/9; }
 
-.hero-cta button {
-    font-size:14px;
-    padding:10px 18px;
-}
-
 .logo-container {
     flex-direction:column;
-    align-items:center;
 }
 
 .company-name {
-    font-size:14px;
+    font-size:16px;
     margin-left:0;
+    margin-top:5px;
+}
+
+.hero-cta button {
+    font-size:14px;
+    padding:10px 20px;
 }
 }
 </style>
@@ -193,11 +178,6 @@ form input, form textarea {
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-content">
-        <h1>Exporting Premium Agro Products from India</h1>
-        <p>Trusted supplier for global markets</p>
-    </div>
-
     <div class="hero-cta">
         <button onclick="location.href='#contact'">Request Quote</button>
     </div>
