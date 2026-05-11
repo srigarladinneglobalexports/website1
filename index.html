@@ -4,329 +4,781 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sri Garladinne Global Exports | Agro Exporter India</title>
-<meta name="description" content="Leading exporter of mangoes, onions, moringa powder and agro products from India.">
+<title>Sri Garladinne Global Exports | Premium Agro Exporter India</title>
+
+<meta name="description" content="Sri Garladinne Global Exports is a trusted exporter of fresh mangoes, onions, moringa powder, vermicompost and agricultural products from Telangana, India.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-body { margin:0; font-family:Arial; color:#333; }
-html { scroll-behavior:smooth; }
+
+:root{
+    --green:#1a5c2e;
+    --green-light:#2d7a44;
+    --gold:#c8922a;
+    --cream:#faf8f2;
+    --dark:#1a1a14;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--cream);
+    color:#333;
+    line-height:1.6;
+}
 
 /* HEADER */
-header {
-    background:white;
+
+header{
+    background:var(--cream);
     padding:15px 20px;
     display:flex;
     flex-direction:column;
     align-items:center;
-    border-bottom:1px solid #eee;
+    border-bottom:1px solid #e8e8e8;
     position:sticky;
     top:0;
     z-index:1000;
 }
 
-/* LOGO + NAME */
-.logo-container {
+/* LOGO */
+
+.logo-container{
     display:flex;
     align-items:center;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
-.logo-container img {
-    height:70px; /* increased */
+.logo-container img{
+    height:80px;
 }
 
-.company-name {
-    font-size:22px; /* increased */
-    font-weight:bold;
-    color:#0b3d5c;
+.company-name{
+    font-size:24px;
+    font-weight:700;
+    color:var(--green);
     margin-left:12px;
 }
 
-/* NAV BELOW */
-nav {
+/* NAV */
+
+nav{
     display:flex;
-    justify-content:center;
     flex-wrap:wrap;
+    justify-content:center;
 }
 
-nav a {
-    margin:8px 15px;
+nav a{
     text-decoration:none;
-    color:#0b3d5c;
-    font-weight:bold;
+    margin:8px 16px;
+    color:var(--green);
+    font-weight:600;
+    transition:0.3s;
 }
 
-/* HERO CLEAN */
-.hero {
+nav a:hover{
+    color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
     background:url('banner.jpg') center/cover no-repeat;
     aspect-ratio:16/6;
     position:relative;
 }
 
-/* CTA BUTTON */
-.hero-cta {
+/* HERO CTA */
+
+.hero-cta{
     position:absolute;
     bottom:25px;
     left:50%;
     transform:translateX(-50%);
 }
 
-.hero-cta button {
-    padding:12px 28px;
-    background:#2ecc71;
+.hero-cta button{
+    background:var(--gold);
+    color:var(--dark);
     border:none;
-    color:white;
+    padding:14px 30px;
+    border-radius:40px;
     font-size:16px;
-    border-radius:30px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.25);
+    font-weight:600;
+    cursor:pointer;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.hero-cta button:hover{
+    background:#e0a820;
+}
+
+/* TRUST BAR */
+
+.trust-bar{
+    background:white;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    border-bottom:1px solid #eee;
+}
+
+.trust-item{
+    color:var(--green);
+    font-weight:600;
+    font-size:14px;
 }
 
 /* SECTION */
-.section {
-    padding:50px 20px;
+
+.section{
+    padding:70px 20px;
     text-align:center;
 }
 
+.section h2{
+    color:var(--green);
+    margin-bottom:15px;
+    font-size:34px;
+}
+
+.section p{
+    max-width:850px;
+    margin:auto;
+    color:#555;
+}
+
+/* ABOUT */
+
+#about{
+    background:var(--cream);
+}
+
 /* GRID */
-.grid {
+
+.grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    margin-top:40px;
 }
 
-/* PRODUCT */
-.product {
-    border:1px solid #ddd;
-    padding:15px;
-    border-radius:10px;
+/* PRODUCTS */
+
+#products{
+    background:white;
 }
 
-.product img {
+.product{
+    background:white;
+    border:1px solid #e6e6e6;
+    border-radius:14px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.product img{
     width:100%;
-    height:150px;
+    height:200px;
     object-fit:cover;
 }
 
-.spec {
-    text-align:left;
-    font-size:14px;
+.product-content{
+    padding:18px;
 }
 
-/* SECTIONS */
-.trust { background:#f9f9f9; }
-.cta { background:#0b3d5c; color:white; }
+.product h3{
+    color:var(--green);
+    margin-bottom:10px;
+}
 
-/* FORM */
-form input, form textarea {
-    width:90%;
-    padding:10px;
-    margin:10px;
+.spec{
+    text-align:left;
+    font-size:14px;
+    color:#555;
+    margin-top:10px;
+}
+
+/* WHY US */
+
+.trust{
+    background:var(--cream);
+}
+
+.why-card{
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    border:1px solid #e6e6e6;
+}
+
+.why-card h3{
+    color:var(--green);
+    margin:10px 0;
+}
+
+/* MARKETS */
+
+.markets{
+    background:var(--green);
+    color:white;
+}
+
+.markets h2{
+    color:white;
+}
+
+.market-list{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.market-pill{
+    background:rgba(255,255,255,0.12);
+    padding:12px 22px;
+    border-radius:40px;
+    border:1px solid rgba(255,255,255,0.15);
+}
+
+/* CERTIFICATIONS */
+
+.certifications{
+    background:white;
+}
+
+.cert-grid{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.cert-box{
+    background:var(--cream);
+    padding:20px;
+    border-radius:12px;
+    min-width:220px;
+}
+
+/* CTA */
+
+.cta{
+    background:linear-gradient(135deg,var(--gold),#e0a820);
+    color:var(--dark);
+}
+
+.cta h2{
+    color:var(--dark);
+}
+
+.cta button{
+    margin-top:20px;
+    background:var(--dark);
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    margin-top:40px;
+    text-align:left;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    border:1px solid #e6e6e6;
+}
+
+.contact-box h3{
+    color:var(--green);
+    margin-bottom:15px;
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-family:'Poppins',sans-serif;
+}
+
+form textarea{
+    min-height:120px;
+}
+
+form button{
+    width:100%;
+    background:var(--green);
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+form button:hover{
+    background:var(--green-light);
 }
 
 /* WHATSAPP */
-.whatsapp {
+
+.whatsapp{
     position:fixed;
-    bottom:20px;
     right:20px;
+    bottom:20px;
     background:#25D366;
     color:white;
-    padding:12px 18px;
-    border-radius:30px;
+    padding:14px 22px;
+    border-radius:50px;
     text-decoration:none;
-    display:flex;
-    align-items:center;
-    gap:8px;
+    font-weight:600;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 
 /* MOBILE */
+
 @media(max-width:768px){
 
-.hero { aspect-ratio:16/9; }
+.hero{
+    aspect-ratio:16/9;
+}
 
-.logo-container {
+.company-name{
+    font-size:16px;
+}
+
+.logo-container{
     flex-direction:column;
 }
 
-.company-name {
-    font-size:16px;
-    margin-left:0;
-    margin-top:5px;
+.logo-container img{
+    height:65px;
 }
 
-.hero-cta button {
+.company-name{
+    margin-left:0;
+    margin-top:8px;
+}
+
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.hero-cta button{
     font-size:14px;
-    padding:10px 20px;
+    padding:12px 24px;
 }
+
+.section h2{
+    font-size:28px;
 }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo-container">
-    <img src="logo.jpg" alt="Logo">
-    <span class="company-name">Sri Garladinne Global Exports</span>
+    <img src="logo.jpg" alt="Sri Garladinne Global Exports">
+    <div class="company-name">Sri Garladinne Global Exports</div>
 </div>
 
 <nav>
 <a href="#about">About</a>
 <a href="#products">Products</a>
+<a href="#markets">Markets</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 <!-- HERO -->
+
 <section class="hero">
-    <div class="hero-cta">
-        <button onclick="location.href='#contact'">Request Quote</button>
-    </div>
+
+<div class="hero-cta">
+<button onclick="location.href='#contact'">Request Quote</button>
+</div>
+
 </section>
+
+<!-- TRUST BAR -->
+
+<div class="trust-bar">
+<div class="trust-item">✔ IEC Registered</div>
+<div class="trust-item">✔ APEDA Certified</div>
+<div class="trust-item">✔ FSSAI Approved</div>
+<div class="trust-item">✔ Direct Farm Sourcing</div>
+<div class="trust-item">✔ Custom Packaging</div>
+</div>
 
 <!-- ABOUT -->
+
 <section id="about" class="section">
+
 <h2>About Us</h2>
+
 <p>
 Sri Garladinne Global Exports is a dynamic export company based in Telangana, India, specializing in the sourcing and international distribution of high-quality agricultural and allied products.
+With strong roots in farming and a commitment to quality, we bridge Indian produce with global markets efficiently and reliably.
 </p>
 
-<h3>Our Vision</h3>
-<p>To become a globally trusted export brand delivering premium agricultural products with consistency, integrity, and excellence.</p>
-</section>
+<br><br>
 
-<!-- TRUST -->
-<section class="section trust">
-<h2>Why Choose Us</h2>
-<div class="grid">
-<div>✔ Direct sourcing from farmers</div>
-<div>✔ Export quality products</div>
-<div>✔ Competitive pricing</div>
-<div>✔ Reliable logistics</div>
-<div>✔ Custom packaging</div>
-</div>
+<h2 style="font-size:28px;">Our Vision</h2>
+
+<p>
+To become a globally trusted export brand delivering premium agricultural products with consistency, integrity, and excellence.
+</p>
+
 </section>
 
 <!-- PRODUCTS -->
+
 <section id="products" class="section">
+
 <h2>Our Products</h2>
+
+<p>
+Each product is carefully sourced, graded, and packaged to meet international food safety and quality standards.
+</p>
 
 <div class="grid">
 
 <div class="product">
+
 <img src="mango-varieties.jpg">
+
+<div class="product-content">
+
 <h3>Fresh Mangoes</h3>
+
+<p>
+Handpicked Alphonso and Banganapalli mangoes packed for export freshness and international quality standards.
+</p>
+
 <div class="spec">
 ✔ Variety: Alphonso / Banganapalli <br>
 ✔ MOQ: 1 Ton <br>
 ✔ Packing: 5kg boxes
 </div>
+
+</div>
 </div>
 
 <div class="product">
+
 <img src="onions.jpg">
-<h3>Onions</h3>
+
+<div class="product-content">
+
+<h3>Premium Onions</h3>
+
+<p>
+Large-sized export-grade onions sourced directly from Indian farmers with consistent quality and sizing.
+</p>
+
 <div class="spec">
 ✔ Size: 40mm+ <br>
 ✔ MOQ: 5 Tons <br>
 ✔ Packing: 25kg bags
 </div>
+
+</div>
 </div>
 
 <div class="product">
+
 <img src="moringa.jpg">
+
+<div class="product-content">
+
 <h3>Moringa Powder</h3>
+
+<p>
+Premium organic moringa powder processed hygienically and supplied in bulk export quantities.
+</p>
+
 <div class="spec">
 ✔ Organic <br>
-✔ Bulk supply <br>
-✔ Export grade
+✔ Bulk Supply <br>
+✔ Export Grade
+</div>
+
 </div>
 </div>
 
 <div class="product">
+
 <img src="vermicompost.jpg">
+
+<div class="product-content">
+
 <h3>Vermicompost</h3>
+
+<p>
+Nutrient-rich organic fertilizer ideal for sustainable agriculture and farming applications.
+</p>
+
 <div class="spec">
-✔ Organic fertilizer <br>
-✔ 25kg bags <br>
-✔ High nutrient
+✔ Organic Fertilizer <br>
+✔ 25kg Bags <br>
+✔ High Nutrient
+</div>
+
 </div>
 </div>
 
 </div>
+
+</section>
+
+<!-- WHY US -->
+
+<section class="section trust">
+
+<h2>Why Choose Us</h2>
+
+<div class="grid">
+
+<div class="why-card">
+<h3>🌾 Direct Farm Sourcing</h3>
+<p>We work directly with farmers ensuring fresher produce and better pricing.</p>
+</div>
+
+<div class="why-card">
+<h3>✅ Export Quality</h3>
+<p>Products are packed and graded according to international standards.</p>
+</div>
+
+<div class="why-card">
+<h3>💰 Competitive Pricing</h3>
+<p>Reliable pricing for bulk orders with flexible export solutions.</p>
+</div>
+
+<div class="why-card">
+<h3>📦 Custom Packaging</h3>
+<p>Packaging options tailored to buyer and destination requirements.</p>
+</div>
+
+</div>
+
 </section>
 
 <!-- MARKETS -->
-<section class="section">
+
+<section id="markets" class="section markets">
+
 <h2>Markets We Serve</h2>
-<p>UK | UAE | Middle East | Europe</p>
+
+<p>
+We export premium agricultural products to global buyers and importers.
+</p>
+
+<div class="market-list">
+
+<div class="market-pill">🇬🇧 United Kingdom</div>
+<div class="market-pill">🇦🇪 UAE</div>
+<div class="market-pill">🌍 Middle East</div>
+<div class="market-pill">🇪🇺 Europe</div>
+
+</div>
+
 </section>
 
 <!-- CERTIFICATIONS -->
-<section class="section trust">
+
+<section class="section certifications">
+
 <h2>Certifications</h2>
-<p>
-✔ IEC Registered <br>
-✔ APEDA Certified <br>
-✔ FSSAI Approved
-</p>
+
+<div class="cert-grid">
+
+<div class="cert-box">
+<h3>📋 IEC Registered</h3>
+<p>Import Export Code</p>
+</div>
+
+<div class="cert-box">
+<h3>🏆 APEDA Certified</h3>
+<p>Agricultural & Processed Food Products</p>
+</div>
+
+<div class="cert-box">
+<h3>🛡 FSSAI Approved</h3>
+<p>Food Safety Standards</p>
+</div>
+
+</div>
+
 </section>
 
 <!-- CTA -->
+
 <section class="section cta">
+
 <h2>Looking for Reliable Export Partner?</h2>
-<p>Contact us today for best prices and quality products</p>
-<button onclick="location.href='#contact'">Send Inquiry</button>
+
+<p>
+Get competitive pricing, export-grade quality, and reliable logistics support.
+</p>
+
+<button onclick="location.href='#contact'">
+Send Inquiry
+</button>
+
 </section>
 
 <!-- CONTACT -->
+
 <section id="contact" class="section">
+
 <h2>Contact Us</h2>
 
+<div class="contact-grid">
+
+<div class="contact-box">
+
+<h3>Get In Touch</h3>
+
+<p><strong>Email:</strong><br>
+srigarladinneglobalexports@gmail.com</p>
+
+<br>
+
+<p><strong>Phone / WhatsApp:</strong><br>
++91-7306598777</p>
+
+<br>
+
+<p><strong>Location:</strong><br>
+Telangana, India</p>
+
+<br>
+
+<p><strong>Business Hours:</strong><br>
+Mon – Sat: 9:00 AM – 6:00 PM IST</p>
+
+</div>
+
+<div class="contact-box">
+
 <form id="contactForm">
-<input type="text" name="name" placeholder="Your Name" required><br>
-<input type="email" name="email" placeholder="Your Email" required><br>
-<textarea name="message" placeholder="Your Inquiry" required></textarea><br>
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="text" name="company" placeholder="Company / Country">
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="product" placeholder="Product Interest">
+
+<textarea name="message" placeholder="Tell us your requirements..."></textarea>
+
 <button type="submit">Send Inquiry</button>
+
 <p id="formStatus"></p>
+
 </form>
 
-<p>Email: srigarladinneglobalexports@gmail.com</p>
-<p>Phone: +91-7306598777</p>
+</div>
+
+</div>
 
 </section>
 
 <!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/917306598777?text=Hello%20I%20am%20interested%20in%20your%20products" target="_blank">
+
+<a class="whatsapp"
+href="https://wa.me/917306598777?text=Hello%20I%20am%20interested%20in%20your%20products"
+target="_blank">
 💬 Chat with us
 </a>
 
+<!-- FOOTER -->
+
 <footer>
-<p style="text-align:center;padding:20px;background:#0b3d5c;color:white;">
-© 2026 Sri Garladinne Global Exports
-</p>
+© 2026 Sri Garladinne Global Exports | Telangana, India
 </footer>
 
 <script>
+
 const form = document.getElementById("contactForm");
 const status = document.getElementById("formStatus");
 
 form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
 
-    const response = await fetch("https://formspree.io/f/xwvylylq", {
-        method: "POST",
-        body: data,
-        headers: { 'Accept': 'application/json' }
-    });
+e.preventDefault();
 
-    if (response.ok) {
-        status.innerHTML = "✅ Inquiry submitted successfully!";
-        form.reset();
-    } else {
-        status.innerHTML = "❌ Something went wrong.";
-    }
+const data = new FormData(form);
+
+const response = await fetch("https://formspree.io/f/xwvylylq", {
+method: "POST",
+body: data,
+headers: {
+'Accept': 'application/json'
+}
 });
+
+if(response.ok){
+status.innerHTML = "✅ Inquiry submitted successfully!";
+form.reset();
+}
+else{
+status.innerHTML = "❌ Something went wrong.";
+}
+
+});
+
 </script>
 
 </body>
